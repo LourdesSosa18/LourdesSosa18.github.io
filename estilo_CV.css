@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: rgb(255, 236, 253);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: white;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(246,241,238,255);
+}
+.container .left_side{
+    position: relative;
+    background: rgb(217, 255, 190);
+    padding: 40px;
+}
+.DescripciónDePerfil{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5px;
+    border-bottom: 3px solid orangered;
+}
+.DescripciónDePerfil .imgBx{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.DescripciónDePerfil .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.DescripciónDePerfil h2 {
+    color: rgb(34, 14, 0);
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.DescripciónDePerfil h2 span {
+    font-size: 1em;
+    font-weight: 300;
+}
+.Contacto {
+    padding-top: 20px;
+}
+.title {
+    color:black;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.Contacto ul {
+    position: relative; 
+}
+.Contacto ul li {
+    position: relative; 
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.Contacto ul li .icon {
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: rgb(133, 59, 252);
+}
+.Contacto ul li span {
+    color: black;
+    font-weight: 400;
+}
+.Educación li {
+    margin-bottom: 15px;
+}
+.Educación li h5 {
+    color: rgb(133, 59, 252);
+    font-weight: 700;
+}
+.Educación li h4:nth-child(2) {
+    color: black;
+    font-weight: 600;
+}
+.Educación li h4 {
+    color: black;
+    font-weight: 300;
+}
+.Idiomas .percent {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: orangered;
+    display: block;
+    margin-top: 5px;
+}
+.Idiomas ul li span {
+    color: #000000;
+    font-weight: 400;
+}
+.Idiomas .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background:blueviolet;   
+}
+.container .right_side{
+    position: relative;
+    background: white;
+    padding: 40px;
+}
+.Sobre_mí {
+    margin-bottom: 50px;
+}
+.Sobre_mí:last-child {
+    margin-bottom: 0;
+}
+.title2 {
+    color: rgb(117, 31, 0);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+p {
+    color: black;
+}
+.Sobre_mí .box {
+    display: flexbox;
+    flex-direction: row;
+    margin: 10px 0;
+}
+.Sobre_mí .box .años_trabajados{
+    min-width: 150px;
+}
+.Sobre_mí .box .años_trabajados h5 {
+    text-transform: uppercase;
+    color: rgb(70, 69, 69) ;
+    font-weight: 700;
+    font-size: 15px;
+}
+.Sobre_mí .box .text h4 {
+    text-transform: uppercase;
+    color: orangered;
+    font-size: 20px
+}
+.Habilidades .box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.Habilidades .box h4{
+    text-transform: uppercase;
+    color: #0f5006;
+    font-weight: 600;
+}
+.Habilidades .box .percent{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: rgb(250, 145, 107);
+}
+.Habilidades .box .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgb(132, 52, 207);
+}
+.intereses ul {
+    display: grid;
+    grid-template-columns: repeat(4.1fr);
+}
+.intereses ul li {
+    list-style: none;
+    color: black;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.intereses ul li .fa {
+    color: blueviolet;
+    font-size: 18px;
+    width: 20px;
+}
+@media (max-width: 1000px){
+    .container{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .intereses ul{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 600px){
+    .Sobre_mí .box{
+        flex-direction: column;
+    }
+    .Sobre_mí .box .años_trabajados{
+        margin-bottom: 5px;
+    }
+    .intereses ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .Habilidades .box{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+.top{
+    position: fixed;
+    top: 0;
+}
+.btn{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+
+    border-radius: 5px;
+    border-color: rgb(78, 78, 73);
+    background-color: #f1c6ec;
+    padding: 5px;
+    color: #333030;
+    cursor: pointer;
+}
+.modo-oscuro .btn{
+    border-radius: 5px;
+    border-color: #cccccc;
+    background-color: #461586;
+    padding: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+.modo-oscuro{
+    background: #000;
+}
+.modo-oscuro .container{
+    background-color: rgb(49, 29, 68);
+    box-shadow: 0 35px 55px rgb(24, 4, 99);
+}
+.modo-oscuro .container .left_side{
+    background-color: #060320;
+}
+.modo-oscuro .DescripciónDePerfil{
+    border-bottom: 3px solid rgb(63, 1, 121);
+}
+.modo-oscuro .DescripciónDePerfil h2{
+    color: #f7ebe4;
+}
+.modo-oscuro .title{
+    color: #dbd4cf;
+}
+.modo-oscuro .Contacto ul li .icon{
+    color: #4272f7;
+}
+.modo-oscuro .Contacto ul li span{
+    color: #a78add;
+}
+.modo-oscuro .Educación h5{
+    color: #c7c2bf;
+}
+.modo-oscuro .Educación h4:nth-child(2){
+    color: #573d61;
+}
+.modo-oscuro .Educación h4{
+    color: #8e9fce;
+}
+.modo-oscuro .Idiomas ul li span {
+    color: #752041;
+    font-weight: 400;
+}
+.modo-oscuro .Idiomas .percent{
+    background: #0b4347;
+}
+.modo-oscuro .Idiomas .percent div{
+    background: #350d55;
+}
+.modo-oscuro .container .right_side{
+    background-color: #090411;
+}
+.modo-oscuro .title2{
+    color: #c6c1c9;
+}
+.modo-oscuro p{
+    color: #cfcdcc;
+}
+.modo-oscuro .Sobre_mí .box .años_trabajados h5{
+    color: #9e9c9b;
+}
+.modo-oscuro .Sobre_mí .box .text h4{
+    color: #c5c3c2;
+}
+.modo-oscuro .Habilidades .box h4{
+    color: #c4c2c1;
+}
+.modo-oscuro .Habilidades .box .percent{
+    background: #0b4347;
+}
+.modo-oscuro .Habilidades .box .percent div{
+    background: #350d55;
+}
+.modo-oscuro .intereses ul {
+   color: #09033a;
+}
+.modo-oscuro .intereses ul li {
+    color: rgb(190, 187, 187);
+}
+.modo-oscuro .intereses ul li .fa {
+    color: #4272f7;
+}
+.btn{
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
